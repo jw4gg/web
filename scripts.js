@@ -1,18 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Sample data for posts
+    // Sample data for blog posts
     const postsData = [
         { title: 'First Post', content: 'This is my first post on this blog.' },
         { title: 'Second Post', content: 'This is my second post on this blog.' },
         { title: 'Third Post', content: 'This is my third post on this blog.' }
     ];
 
-    const postsContainer = document.getElementById('posts');
+    const blogPostsContainer = document.querySelector('.blog-posts');
 
-    // Function to display posts
-    function displayPosts() {
+    // Function to display blog posts
+    function displayBlogPosts() {
         postsData.forEach(post => {
             const postElement = document.createElement('div');
-            postElement.classList.add('post');
+            postElement.classList.add('blog-post');
 
             const titleElement = document.createElement('h2');
             titleElement.textContent = post.title;
@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
             postElement.appendChild(titleElement);
             postElement.appendChild(contentElement);
 
-            postsContainer.appendChild(postElement);
+            blogPostsContainer.appendChild(postElement);
         });
     }
 
-    // Display posts when the DOM is loaded
-    displayPosts();
+    // Display blog posts when the DOM is loaded
+    displayBlogPosts();
 });
